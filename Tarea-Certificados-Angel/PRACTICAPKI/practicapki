@@ -39,6 +39,9 @@ server {
         if ($ssl_client_s_dn !~* "CN=superusuario-angel") { 
             return 403;
         } 
+        if ($ssl_client_s_dn !~* "CN=angelgarcialopez") { 
+            return 403;
+        } 
     }
 
     # Procesar solicitudes PHP
